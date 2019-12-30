@@ -1,31 +1,26 @@
+/*https://github.com/huaji233333/urban-spoon*/
+/*v0.1-release*/
 #include <iostream>
 using namespace std;
 int main()
-{
-	int n=10;
-	/*for(int i=1;i<=n;i++)
-	{	for(int j=n;j<=n;j++)
-		{
-		cout<<" ";
-	}}; */
+{	int n;
+	cin>>n;
 	
 	for(int i=1;i<=n;i++)
-	{	for(int j=i/2;j<=n;j++)
+	{	if(i%2==1)
 		{
+		for(int j=(n-i)/2;j>=1;j--)
 		cout<<" ";
-		}
-		for(int j=n-i+1;j<=n;j++)
-		{
+		for(int q=1;q<=i;q++)
 		cout<<"*";
-		}	
 		cout<<endl; 
+		}	
 	}; 
-	for(int i=1;i<=n/2;i++)
-		{cout<<"          ";
-		cout<<"||"<<endl;
-		}
-
-
-
+	for(int i=1;i<=n/3;i++)
+	{	for(int i=1;i<=n/2-1;i++)
+			cout<<" ";
+		cout<<"| |"<<endl;
+	}; 
+	system("pause");
 	return 0;
 }
